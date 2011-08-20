@@ -15,3 +15,19 @@ print [(a*b*c) for a in range(1,1000) for b in range(1,1000-a) for c in range(1,
 # user	0m25.510s
 # sys	0m0.080s
 
+# Faster solution from tskww on the forum:
+# First, a little analysis reveals the following properties. For all triples,
+# a^2+b^2 = c^2; a+b > c, c > a, c > b. We can also define b > a. Since a + b + 
+# c = 1000, it follows that 500 > c > 334. (If c > 500, then a+b > c doesn't 
+# hold. If c < 334 and b > a, then c > b doesn't hold.) So, in Python: 
+
+# for c in xrange(334,500):
+#    for a in xrange(1, (1000-c)/2):
+#        b = (1000 - c) - a
+#        if a**2 + b**2 == c**2:
+#            print a*b*c 
+
+# real	0m0.068s
+# user	0m0.060s
+# sys	0m0.000s
+            
