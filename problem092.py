@@ -1,5 +1,5 @@
 def number_chain(n):
-  x = sum(int(i)**2 for i in list(str(n)))
+  x = sum(int(i)**2 for i in str(n))
   if x == 89:
     return True
   elif x == 1:
