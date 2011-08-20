@@ -45,11 +45,7 @@ def D(f,n):
     return fn[n-1]
 
 # Checking for example values:
-# A = '1415926535'
-# B = '8979323846'
-#
-# f = F(A,B)
-# print D(f,35)        # returns the correct answer
+assert D(F('1415926535','8979323846'), 35) == '9'
 
 # Now for the real question
 A = '1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679'
@@ -59,5 +55,5 @@ f = F(A,B)
 
 print sum(map(int, [D(f,((127+(19*n))*(7**n))) for n in range(18)]))
 
-# runs in under a second for sum(... for n in range(8)])) 
+# runs in under two seconds for sum(... for n in range(8)])) 
 # but any larger values of n take excessively long. 
