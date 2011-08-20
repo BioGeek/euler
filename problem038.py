@@ -21,9 +21,9 @@ def isPandigital(n):
 def concatenated_product(x, l):
     return ''.join(map(lambda i: str(x * i), l))
 
-# Cjecking for example values:
-# concatenated_product(192, [1,2,3])
-# concatenated_product(9, range(1,6))
+# Checking for example values:
+assert concatenated_product(192, [1,2,3]) == '192384576'
+assert concatenated_product(9, range(1,6)) == '918273645'
 
 largest = 0
 for x in range(10000):
