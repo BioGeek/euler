@@ -13,8 +13,6 @@
 #
 # Which starting number, under one million, produces the longest chain?
 
-greatest = 0
-
 def collatz(n):
     """generates iterative sequence (does not include the final 1)"""
     while n != 1:
