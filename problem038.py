@@ -3,6 +3,7 @@
 # 192 * 1 = 192
 # 192 * 2 = 384
 # 192 * 3 = 576
+#
 # By concatenating each product we get the 1 to 9 pandigital, 
 # 192384576. We will call 192384576 the concatenated product of 192 and (1,2,3)
 #
@@ -20,6 +21,7 @@ def isPandigital(n):
 def concatenated_product(x, l):
     return ''.join(map(lambda i: str(x * i), l))
 
+# Cjecking for example values:
 # concatenated_product(192, [1,2,3])
 # concatenated_product(9, range(1,6))
 
@@ -31,6 +33,11 @@ for x in range(10000):
       if isPandigital(cp):
         if cp > largest:
           largest = cp
-          print 'pandigital:', cp, x, l
         
-print 'largest:', largest
+print largest
+
+# 932718654
+#
+# real	0m0.450s
+# user	0m0.440s
+# sys	0m0.000s
