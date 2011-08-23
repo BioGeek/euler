@@ -2,16 +2,17 @@
 #
 # What is the largest prime factor of the number 600851475143 ?
 
+# Very easy in Mathematica:
+# Max[FactorInteger[600851475143]]
+
 import sys, math
 
 def factorize(n):
     """Prime factorization. This algorithm decomposes an integer into a product 
     of factors that are prime numbers. The fundamental theorem of arithmetic 
-    guarantees that this decomposition is unique.
-    See: http://www.indopedia.org/index.php?title=Prime_factorization_algorithm"""
+    guarantees that this decomposition is unique."""
     def isPrime(n):
-        return not [x for x in xrange(2,int(math.sqrt(n)))
-                    if n%x == 0]
+        return not [x for x in xrange(2,int(math.sqrt(n))) if n%x == 0]
     primes = []
     candidates = xrange(2,n+1)
     candidate = 2
