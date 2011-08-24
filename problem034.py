@@ -9,7 +9,7 @@
 fac = lambda n: n<=0 or reduce(lambda a,b: a*b, xrange(1,n+1))
 
 def sum_factorial_of_digits(number):
-    return sum(map(fac, map(int, list(str(number)))))
+    return sum(map(fac, map(int, str(number))))
 
 # check for sample value
 assert sum_factorial_of_digits(145) == 145
@@ -19,7 +19,7 @@ print sum(i for i in range(fac(9)) if i == sum_factorial_of_digits(i)) - 3
 
 # 40730
 #
-# real	0m10.011s
-# user	0m7.340s
-# sys	0m0.450s
+# real	0m4.911s
+# user	0m4.770s
+# sys	0m0.010s
 
