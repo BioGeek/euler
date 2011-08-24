@@ -11,7 +11,7 @@ def factorial(n):
     return reduce(mul, range(1,n+1))
 
 def sum_of_digits(number):
-    return sum(map(int, list(str(number))))
+    return sum(map(int, str(number)))
 
 # check for example values
 assert factorial(10) == 3628800
@@ -21,7 +21,7 @@ print sum_of_digits(factorial(100))
 
 # 648
 #
-# real	0m0.044s
-# user	0m0.040s
+# real	0m0.037s
+# user	0m0.030s
 # sys	0m0.000s
 
