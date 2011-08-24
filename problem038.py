@@ -16,7 +16,7 @@
 
 def isPandigital(n):
     assert len(str(n)) == 9
-    return ''.join(sorted(list(str(n)))) == '123456789'
+    return ''.join(sorted(str(n))) == '123456789'
 
 def concatenated_product(x, l):
     return ''.join(map(lambda i: str(x * i), l))
@@ -38,6 +38,7 @@ print largest
 
 # 932718654
 #
-# real	0m0.450s
-# user	0m0.440s
-# sys	0m0.000s
+# real	0m0.413s
+# user	0m0.400s
+# sys	0m0.010s
+
