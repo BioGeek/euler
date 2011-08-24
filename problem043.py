@@ -41,3 +41,16 @@ print sum(l)
 # real	0m15.248s
 # user	0m12.630s
 # sys	0m0.590s
+
+# The hasSubstringProperty function can be written more consice as:
+# primes = [None, 2, 3, 5, 7, 11, 13, 17]
+#
+# def hasSubStringProperty(n):
+#     return all(not int(str(n)[i:i+3])%primes[i] for i in range(1,8))
+#
+# but, is 5 seconds slower then:
+#
+# real	0m20.072s
+# user	0m20.000s
+# sys	0m0.040s
+
