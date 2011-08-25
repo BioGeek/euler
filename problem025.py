@@ -1,7 +1,7 @@
 # The Fibonacci sequence is defined by the recurrence relation:
 #
 # F_n = F_n1 + F_n2, where F_1 = 1 and F_2 = 1.
-# Hence the F_irst 12 terms will be:
+# Hence the first 12 terms will be:
 # 
 # F_1 = 1
 # F_2 = 1
