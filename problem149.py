@@ -12,7 +12,7 @@
 # First, generate four million pseudo-random numbers using a specific form of 
 # what is known as a "Lagged Fibonacci Generator":
 #
-# For 1 <= k <= 55, s_k = [100003  200003k + 300007k^3] (modulo 1000000) - 500000.
+# For 1 <= k <= 55, s_k = [100003 - 200003k + 300007k^3] (modulo 1000000) - 500000.
 # For 56 <= k <= 4000000, s_k = [s_k-24 + s_k-55 + 1000000] (modulo 1000000) - 500000.
 #
 # Thus, s_10 = 393027 and s_100 = 86613.
