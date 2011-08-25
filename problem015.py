@@ -41,7 +41,7 @@ assert len(set(list(permutations('RRDD', 4)))) == 6
 # doesn't complete within a minute. So back to the drawing board.
 
 # The number of permutations is the factorial of((number of R's) + (number of 
-# D's)). To remove the duplicates divide by (factorial(number of R') * 
+# D's)). To remove the duplicates divide by (factorial(number of R's) * 
 # factorial(number of D's))
 
 def factorial(n):
