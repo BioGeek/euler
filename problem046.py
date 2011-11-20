@@ -13,6 +13,7 @@
 # What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
 
 # first 1000 primes, source: http://primes.utm.edu/lists/small/1000.txt
+
 primes = map(int, """\
       2      3      5      7     11     13     17     19     23     29 
      31     37     41     43     47     53     59     61     67     71 
@@ -117,9 +118,15 @@ primes = map(int, """\
 
 # A composite number is any positive integer greater than one that is not a prime number.
 # This code assumes that the desired number is smaller then the 1000th prime
+
 for oddcomposite in [i for i in range(3,primes[-1],2) if i not in primes]:
     if not any(prime + (2 * i**2) == oddcomposite for prime in primes for i in range(1,oddcomposite-prime) if prime < oddcomposite):
         print oddcomposite
+        break
     
-    
-    
+# 5777
+#
+# real	3m48.348s
+# user	3m47.374s
+# sys	0m0.208s
+
