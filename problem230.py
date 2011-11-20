@@ -56,4 +56,4 @@ f = F(A,B)
 print sum(map(int, [D(f,((127+(19*n))*(7**n))) for n in range(18)]))
 
 # TODO: runs in under two seconds for sum(... for n in range(8)])) 
-# but any larger values of n take excessively long. 
+# but any larger values of n takes excessively long. 
