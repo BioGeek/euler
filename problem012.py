@@ -62,4 +62,4 @@ for number in numbers:
         print number
         break
     
-# 76576500 (but took more then 10 minutes)
+# 76576500 (but took more than 10 minutes)
